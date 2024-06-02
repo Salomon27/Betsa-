@@ -1,0 +1,889 @@
+/* Réinitialisation CSS pour supprimer les marges et les rembourrages par défaut */
+html, body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Couleur de fond de la page */
+}
+
+/* En-tête */
+header {
+    background-color: #191970;
+    color: #fff;
+    text-align: center;
+    padding: 10px 2%;
+    position: relative;
+}
+
+/* Trait dynamique pour séparer l'entête */
+header {
+    border-bottom: 2px solid #FFD700; /* Bordure jaune en dessous de l'entête */
+}
+
+.header-title {
+    font-family: 'Segoe Script', cursive; /* Police de script 3D de votre choix */
+    font-size: 55px;
+    color: #FFD700; /* Couleur de la police du titre */
+    text-shadow: 5px 5px 4px #000; /* Ombre de texte pour un effet 3D */
+}
+
+.slogan {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Barre de navigation */
+.navbar {
+    background-color: #191970;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 8px; /* Marge autour de chaque bouton */
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #FFD700;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+.nav-item a:hover {
+    background-color: #FFD700;
+    color: #191970;
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+}
+
+/* Styles pour la légende des diapositives */
+.slide-caption {
+    background-color: rgba(5, 0, 0, 0.4); /* Arrière-plan semi-transparent */
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 97%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slide-caption h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.slide-caption p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Styles pour la section du diaporama */
+.slideshow-container {
+    max-width: 99%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+    animation: fadeIn 2s ease-in-out forwards;
+    object-fit: cover;
+}
+
+.mySlides img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    transition: transform 0.3s ease;
+}
+
+/* Animation de fondu en entrée */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Slider navigation */
+.slider-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prev, .next {
+    background-color: #FFD700;
+    color: #191970;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: #191970;
+    color: #FFD700;
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+}
+
+/* Styles pour la section "À Propos de Betsaï" */
+.presentation {
+    background-color: #191970;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.presentation h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.presentation p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.presentation .btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #191970;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.presentation .btn:hover {
+    background-color: #FFA500;
+    color: #fff;
+}
+
+/* Styles pour la section "Nos Services" */
+.services {
+    background-color: #FFD700;
+    color: #191970;
+    padding: 40px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.services li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Style général pour les liens */
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFA500;
+}
+
+/* Style pour les images côte à côte dans les diapositives */
+.image-pair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-pair img {
+    width: 48%;
+}
+
+/* Style pour la section vidéo */
+.video-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.video-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Styles pour les vidéos côte à côte */
+.video-pair {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.video-pair video {
+    width: 48%; /* Largeur de chaque vidéo à 48% pour laisser un petit espace entre elles */
+}
+
+/* Position de la première vidéo à gauche */
+.video-pair .left-video {
+    order: 1;
+}
+
+/* Position de la deuxième vidéo à droite */
+.video-pair .right-video {
+    order: 2;
+}
+
+.video-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.video-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Styles pour la vidéo avec Video.js */
+.video-js.vjs-fade-in {
+    opacity: 0; /* Opacité initiale à zéro */
+    animation: fadeIn 2s ease-in-out forwards; /* Animation de fondu en entrée */
+}
+
+/* Animation de fondu en entrée */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Style général pour le fond de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("D:\Betsaï\photo.jpeg"); /* Mettez à jour le chemin vers votre image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: inherit;
+    filter: blur(8px);
+}
+
+/* Pied de page */
+footer {
+    background-color: #191970;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Bouton de retour en haut */
+.scroll-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #FFD700;
+    color: #191970;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-top-button:hover {
+    background-color: #191970;
+    color: #FFD700;
+}
+
+/* Style pour le logo */
+#logo-link {
+    display: block;
+    width: 200px; /* Ajustez la largeur selon vos besoins */
+    height: auto;
+    margin: auto; /* Centre le logo horizontalement */
+    position: left;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#logo {
+    width: 99%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Effets dynamiques au survol */
+#logo-link:hover {
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+}
+
+/* Lorsqu'on clique sur le logo, il ramène à la page d'accueil */
+#logo-link:active {
+    transform: scale(0.9); /* Effet de réduction au clic */
+    opacity: 0.8; /* Réduit légèrement l'opacité au clic */
+}
+
+/* Style général pour le fond de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("D:\Betsaï\photo.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    backdrop-filter: blur(10px); /* Fond flou pour toute la page */
+}
+
+/* Style spécifique pour la page du formulaire */
+.form-page {
+    background-color: rgba(25, 25, 112, 0.6); /* Couleur de fond bleu avec transparence */
+}
+
+/* Animation de la bulle du chatbot */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* Styles pour la bulle du chatbot */
+.chatbot-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff; /* Fond blanc */
+    color: #191970; /* Couleur du texte */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centre l'icône horizontalement */
+    align-items: center; /* Centre l'icône verticalement */
+    animation: bounce 2s infinite; /* Animation de rebond */
+    cursor: pointer; /* Ajout d'un curseur pointer */
+}
+
+/* Styles pour l'icône du chatbot */
+#chatbot-icon {
+    position: relative; /* Position relative pour ajuster l'icône à l'intérieur de la bulle */
+    width: 50px; /* Ajustez la taille selon vos besoins */
+    height: 50px; /* Ajustez la taille selon vos besoins */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(1);
+}
+
+#chatbot-icon img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5)); /* Effet d'ombre */
+    transform-style: preserve-3d; /* Effet 3D */
+}
+
+/* Style pour la fenêtre du chatbot (à personnaliser) */
+#chatbot-window {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    display: none; /* Masquer la fenêtre du chatbot par défaut */
+}
+
+#chatbot-header {
+    background-color: #191970;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+#chatbot-header h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#chatbot-content {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#chatbot-input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+#chatbot-send {
+    background-color: #191970;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#chatbot-icon:hover {
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7); /* Ombre plus prononcée au survol */
+}
+/* Styles améliorés pour les champs du formulaire */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Couleur de fond */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+    transition: box-shadow 0.3s ease; /* Animation de l'ombre au survol */
+    font-size: 16px;
+    color: #333; /* Couleur du texte */
+}
+
+/* Changement de couleur de fond et de boîte d'ombre au focus */
+.devis-form input[type="text"]:focus,
+.devis-form input[type="email"]:focus,
+.devis-form input[type="tel"]:focus,
+.devis-form input[type="date"]:focus,
+.devis-form textarea:focus {
+    background-color: #fff; /* Changement de couleur de fond */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au focus */
+}
+
+/* Style amélioré pour les boutons */
+.devis-form button[type="submit"] {
+    background-color: #191970; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond au survol */
+.devis-form button[type="submit"]:hover {
+    background-color: #FFD700; /* Couleur de fond au survol */
+}
+
+/* Aspect esthétique 1 : Bordure arrondie */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea,
+.devis-form button[type="submit"] {
+    border-radius: 20px;
+}
+
+/* Aspect esthétique 2 : Dégradé de couleur */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea,
+.devis-form button[type="submit"] {
+    background-image: linear-gradient(to right, #FFD700, #191970);
+}
+
+/* Aspect esthétique 3 : Bordure avec couleur de fond différente */
+.devis-form input[type="text"]:focus,
+.devis-form input[type="email"]:focus,
+.devis-form input[type="tel"]:focus,
+.devis-form input[type="date"]:focus,
+.devis-form textarea:focus {
+    background-color: #E0FFFF; /* Changement de couleur de fond */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au focus */
+}
+
+/* Aspect esthétique 4 : Effet de survol avec déplacement */
+.devis-form button[type="submit"]:hover {
+    transform: translateY(-2px); /* Déplacement vers le haut au survol */
+}
+
+/* Aspect esthétique 5 : Animation de transition pour le bouton */
+.devis-form button[type="submit"] {
+    transition: all 0.3s ease;
+}
+
+/* Aspect esthétique 6 : Ombre intérieure */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre intérieure */
+}
+
+/* Aspect esthétique 7 : Animation de réduction */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea {
+    transition: all 0.3s ease;
+}
+
+.devis-form input[type="text"]:focus,
+.devis-form input[type="email"]:focus,
+.devis-form input[type="tel"]:focus,
+.devis-form input[type="date"]:focus,
+.devis-form textarea:focus {
+    transform: scale(1.05); /* Réduction au focus */
+}
+
+/* Aspect esthétique 8 : Bordure avec dégradé de couleur */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea {
+    border: 2px solid;
+    border-image: linear-gradient(to right, #FFD700, #191970);
+    border-image-slice: 1;
+}
+
+/* Aspect esthétique 9 : Texte en gras */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea,
+.devis-form button[type="submit"] {
+    font-weight: bold;
+}
+
+/* Aspect esthétique 10 : Espacement supplémentaire */
+.devis-form input[type="text"],
+.devis-form input[type="email"],
+.devis-form input[type="tel"],
+.devis-form input[type="date"],
+.devis-form textarea,
+.devis-form button[type="submit"] {
+    letter-spacing: 1px;
+}
+/* Centrage du formulaire */
+.devis-container {
+    max-width: 600px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 20px; /* Espacement intérieur pour une meilleure lisibilité */
+    background-color: #fff; /* Couleur de fond du conteneur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Pour que la vidéo soit en arrière-plan */
+    object-fit: cover; /* Ajuste la taille de la vidéo pour couvrir tout le conteneur */
+}
+
+/* Centrage et style pour le contenu */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 50px;
+    color: white; /* Couleur du texte */
+}
+
+/* Style pour le contenu de la page À Propos */
+.content {
+    padding: 50px; /* Marge intérieure */
+    color: #fff; /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    background-color: rgba(25, 25, 112, 0.6); /* Couleur de fond avec transparence */
+}
+
+/* Style pour le titre */
+.content h1 {
+    font-size: 36px; /* Taille de la police */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+/* Style pour le paragraphe */
+.content p {
+    font-size: 18px; /* Taille de la police */
+    line-height: 1.6; /* Hauteur de ligne */
+}
+
+/* Style pour le fond de la page */
+body {
+    font-family: Arial, sans-serif; /* Police de caractères */
+    margin: 0; /* Suppression des marges par défaut */
+    padding: 0; /* Suppression des rembourrages par défaut */
+    background-image: url("D:\Betsaï\1014294602-preview.mp4"); /* Chemin de l'image de fond */
+    background-size: cover; /* Redimensionner l'image pour couvrir tout l'élément */
+    background-position: center; /* Centrage de l'image de fond */
+    background-attachment: fixed; /* Fixer l'image de fond lors du défilement */
+}
+
+/* Style pour la vidéo en arrière-plan */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    filter: blur(10px);
+  }
+  
+/* Style général pour les champs de formulaire */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Changement de couleur de la bordure au focus */
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: #191970;
+    outline: none;
+}
+
+/* Style pour le bouton d'envoi */
+.contact-form input[type="submit"] {
+    background-color: #191970;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Changement de couleur de fond du bouton au survol */
+.contact-form input[type="submit"]:hover {
+    background-color: #FFD700;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    color: red;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+/* Changement de couleur du texte d'erreur au survol */
+.error-message:hover {
+    color: darkred;
+}
+/* Styles pour la page de contact */
+.contact-container {
+    background-color: rgba(25, 25, 112, 0.8); /* Fond bleu foncé avec transparence */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.contact-container h2 {
+    color: #FFD700; /* Couleur dorée pour le titre */
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Couleur blanche pour le texte */
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Couleur de fond */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    font-size: 16px;
+    color: #333; /* Couleur du texte */
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background-color: #fff; /* Changement de couleur de fond */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au focus */
+}
+
+.contact-form button[type="submit"] {
+    background-color: #191970; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #FFD700; /* Couleur de fond au survol */
+    color: #191970; /* Couleur du texte au survol */
+}
+
+.error-message {
+    color: #FFD700; /* Couleur dorée pour les messages d'erreur */
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    display: block;
+}
+/* Styles pour la page de demande de devis */
+.devis-container {
+    background-color: rgba(25, 25, 112, 0.8); /* Fond bleu foncé avec transparence */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.devis-container h2 {
+    color: #FFD700; /* Couleur dorée pour le titre */
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.devis-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fff; /* Couleur blanche pour le texte */
+    font-weight: bold;
+}
+
+.devis-form input,
+.devis-form select,
+.devis-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Couleur de fond */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    font-size: 16px;
+    color: #333; /* Couleur du texte */
+    transition: box-shadow 0.3s ease;
+}
+
+.devis-form input:focus,
+.devis-form select:focus,
+.devis-form textarea:focus {
+    background-color: #fff; /* Changement de couleur de fond */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au focus */
+}
+
+.devis-form button[type="submit"] {
+    background-color: #191970; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.devis-form button[type="submit"]:hover {
+    background-color: #FFD700; /* Couleur de fond au survol */
+    color: #191970; /* Couleur du texte au survol */
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil - Betsaï Deco | Agence de Décoration Événementielle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/7.15.4/video.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="chatbot.js" defer></script> <!-- Fichier JavaScript pour le chatbot -->
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Betsaï Deco</h1>
+        <p class="slogan">Créateurs de Moments Mémorables</p>
+        <a rel="sponsored" href="https://www.awin1.com/cread.php?s=3425771&v=58127&q=468733&r=1173344">
+        <img src="https://www.awin1.com/cshow.php?s=3425771&v=58127&q=468733&r=1173344" border="0">
+    </a>
+        <nav class="navbar">
+            <div class="button-pair">
+                <ul class="nav-list" id="navbar">
+                    <li class="nav-item"><a href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a href="devis.html">Demande de Devis</a></li>
+                    <li class="nav-item"><a href="apropos.html">À Propos de Nous</a></li>
+                    <li class="nav-item"><a href="contact.html">Nous Contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+      
+
+    </header>
+    <main>
+        <div class="slideshow-container">
+           <div class="mySlides fade">
+                <div class="image-pair">
+                    <img src="D:\Betsaï\5cf9febdaed52cb949c7b08f99cd81c90571a4a5_lart-de-la-decoration.jpg" alt="Décoration 1" class="left-image">
+                    <img src="D:\Betsaï\b41e344ac65be32808603451ec2cb60e17e0de95_eventdecordesignlightingnjnyceggsoticeventsnjsbesteventdecoratoreventlightingeventdesignweddingbarmitzvahbatmitzvahgalafundraiser09.jpg" alt="Décoration 2" class="right-image">
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="image-pair">
+                    <img src="decoration-salles-de-mariage-rhone-alpes.jpg" alt="Décoration 3" class="left-image">
+                    <img src="deco-table-blanche-retro_3_121103.jpeg" alt="Décoration 4" class="right-image">
+                </div>
+                <div class="slide-caption">
+                    <h3>Design Créatif</h3>
+                    <p>Transformez vos idées en réalité avec notre expertise.</p>
+                </div>
+            </div>
+        </div>
+      
+        <div class="slider-nav">
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+        <section class="presentation">
+            <h2>À Propos de Betsaï</h2>
+            <p>Betsaï est une agence de décoration événementielle spécialisée dans la création de décors uniques pour des événements mémorables.</p>
+            <p>Nous transformons vos idées en réalité en utilisant des concepts créatifs et des designs innovants.</p>
+            <a href="apropos.html" class="btn">En savoir plus</a>
+        </section>
+        <section class="services">
+            <h2>Nos Services</h2>
+            <ul>
+                <li>Décoration de Mariages</li>
+                <li>Décoration d'Événements d'Entreprise</li>
+                <li>Décoration de Fêtes Privées</li>
+                <li>Décoration de Conférences</li>
+            </ul>
+        </section>
+    </main>
+  <section class="video-section">
+    <div class="video-pair">
+        <video id="my-video" class="video-js vjs-fade-in left-video" controls preload="auto" width="640" height="360" data-setup='{}'>
+            <source src="DECORATION MARIAGE.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la lecture de cette vidéo.
+        </video>
+        <video id="my-video-2" class="video-js vjs-fade-in right-video" controls preload="auto" width="640" height="360" data-setup='{}'>
+            <source src="Weedingwhite and redboda blanco y rojo.mp4" type="video/mp4">
+            Votre navigateur ne prend pas en charge la lecture de cette vidéo.
+        </video>
+    </div>
+    <div class="video-text">
+        <h2>Expertise en Décoration de Mariage</h2>
+        <p>Nous apportons une expertise exceptionnelle à chaque décoration de mariage. Notre équipe créative travaille avec vous pour créer des décors uniques et mémorables qui rendront votre jour spécial encore plus spécial.</p>
+    </div>
+ </section>
+    <footer>
+        <p>&copy; 2023 Betsaï Deco - Tous droits réservés</p>
+    </footer>
+    <!-- Bouton de retour en haut -->
+    <button class="scroll-top-button" onclick="scrollToTop()">Retour en Haut</button>
+    <!-- Icône du chatbot avec lien vers la page de service client -->
+    <a href="service_client.html">
+        <div class="chatbot-bubble" onclick="toggleChatbot()">
+            <div id="chatbot-icon" class="chatbot-icon">
+                <img src="D:\Betsaï\4616655.png" alt="Icône du Chatbot">
+            </div>
+            <!-- Fenêtre du chatbot -->
+            <div class="chatbot-window" id="chatbot-window">
+                <div id="chatbot-header">
+                    <h4>Chatbot</h4>
+                </div>
+                <div id="chatbot-content">
+                    <!-- Exemple de message de bienvenue du chatbot -->
+                    <div class="chatbot-message">Chatbot : Bonjour ! Comment puis-je vous aider ?</div>
+                </div>
+                <input type="text" id="chatbot-input" placeholder="Tapez un message...">
+                <button id="chatbot-send">Envoyer</button>
+            </div>
+        </div>
+    </a>
+    <script src="D:\Betsaï\script.js"></script> <!-- Assurez-vous que le chemin vers votre fichier JavaScript est correct -->
+</body>
+</html>

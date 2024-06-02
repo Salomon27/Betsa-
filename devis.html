@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demande de Devis - Betsaï Deco | Agence de Décoration Événementielle</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+        .success-message {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Betsaï Deco</h1>
+        <p class="slogan">Créateurs de Moments Mémorables </p>
+        <nav class="navbar">
+            <div class="button-pair">
+                <ul class="nav-list" id="navbar">
+                    <li class="nav-item"><a href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a href="devis.html">Demande de Devis</a></li>
+                    <li class="nav-item"><a href="apropos.html">À Propos de Nous</a></li>
+                    <li class="nav-item"><a href="contact.html">Nous Contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="devis-container">
+            <h2>Demande de Devis</h2>
+            <form class="devis-form" id="devis-form" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required minlength="2" maxlength="50" aria-label="Nom">
+                <span class="error-message" id="nom-error"></span>
+
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required aria-label="Adresse e-mail">
+                <span class="error-message" id="email-error"></span>
+
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" aria-label="Téléphone">
+                <span class="error-message" id="telephone-error"></span>
+
+                <label for="evenement">Type d'Événement :</label>
+                <select id="evenement" name="evenement" required aria-label="Type d'Événement">
+                    <option value="">Sélectionnez un type d'événement</option>
+                    <option value="Mariage">Mariage</option>
+                    <option value="Anniversaire">Anniversaire</option>
+                    <option value="Corporate">Événement Corporate</option>
+                    <option value="Autre">Autre</option>
+                </select>
+                <span class="error-message" id="evenement-error"></span>
+
+                <label for="date">Date de l'Événement :</label>
+                <input type="date" id="date" name="date" required aria-label="Date de l'Événement">
+                <span class="error-message" id="date-error"></span>
+
+                <label for="lieu">Lieu de l'Événement :</label>
+                <input type="text" id="lieu" name="lieu" required aria-label="Lieu de l'Événement">
+                <span class="error-message" id="lieu-error"></span>
+
+                <label for="budget">Budget Approx. (en €) :</label>
+                <input type="number" id="budget" name="budget" required min="100" aria-label="Budget">
+                <span class="error-message" id="budget-error"></span>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required minlength="10" aria-label="Message"></textarea>
+                <span class="error-message" id="message-error"></span>
+
+                <button type="submit">Envoyer la Demande</button>
+                <span class="success-message" id="success-message"></span>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Betsaï Deco - Tous droits réservés</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

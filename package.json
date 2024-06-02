@@ -1,0 +1,6 @@
+{
+  "description": "Une description concise de votre projet ou de votre application.",
+  "devDependencies": {
+    "electron": "^28.2.2"
+  }
+}

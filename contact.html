@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nous Contacter - Betsaï Deco | Agence de Décoration Événementielle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Betsaï Deco</h1>
+        <p class="slogan">Créateurs de Moments Mémorables </p>
+        <nav class="navbar">
+            <div class="button-pair">
+                <ul class="nav-list" id="navbar">
+                    <li class="nav-item"><a href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a href="devis.html">Demande de Devis</a></li>
+                    <li class="nav-item"><a href="apropos.html">À Propos de Nous</a></li>
+                    <li class="nav-item"><a href="contact.html">Nous Contacter</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="contact-container">
+            <h2>Nous Contacter</h2>
+            <form class="contact-form" action="mailto:businessyonah@gmail.com" method="POST" enctype="text/plain">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required minlength="2" maxlength="50" aria-label="Nom" placeholder="Votre Nom">
+                <span class="error-message" id="nom-error"></span>
+
+                <label for="email">Adresse e-mail :</label>
+                <input type="email" id="email" name="email" required aria-label="Adresse e-mail" placeholder="exemple@domaine.com">
+                <span class="error-message" id="email-error"></span>
+
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" required pattern="[0-9]{10}" aria-label="Téléphone" placeholder="0123456789">
+                <span class="error-message" id="telephone-error"></span>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required minlength="10" aria-label="Message" placeholder="Votre Message"></textarea>
+                <span class="error-message" id="message-error"></span>
+
+                <button type="submit" class="submit-button">Envoyer le Message</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Betsaï Deco - Tous droits réservés</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
